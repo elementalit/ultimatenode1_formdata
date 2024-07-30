@@ -2,7 +2,7 @@
 
 <h1><%= title %></h1>
 
-<% if (data) { %>
+<% if (data.hasOwnProperty('name')) { %>
 
   <p>Data received in last request:</p>
 
@@ -12,6 +12,9 @@
     <% } %>
   </table>
 
+  <% } else { %>
+    <p>No data received in last request:</p>
+  
 <% } %>
 
 <p>Submission form:</p>
